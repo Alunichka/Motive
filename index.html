@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="Описание сайта"/>
+  <meta name="keywords" content="Ключевые слова"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="..."/>
+  <title>Motive_home</title>
+
+  <script src="js/jquery.1.7.1.min.js"></script>
+
+  <script type="text/javascript">
+		$(document).ready(function(){
+
+		    // Адаптивный поиск
+		    // Выезжает форма поиска
+	  		$(".linkForm").click(function(event) {
+	  			$("#form").animate({
+	  				top:"20px"
+	  				},500);
+	  		});
+
+	  		// Прячется форма поиска
+	  		$(".close").click(function(event) {
+	  			$("#form").animate({
+	  				top: "-90px"
+	  			},500);
+	  		});
+	  		// Адаптивный поиск END
+
+			// Адаптивное меню
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 550 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		    // Адаптивное меню END
+
+		});
+	</script>
+
+</head>
+
+<body> 
+<!-- Обвертка страницы -->
+<div id="wrapper">
+	<!-- Верхний блок - шапка с заголовком -->
+	<div id="first_block" class="center">
+		<!-- Шапка страницы -->
+		<header class="clearfix">
+			<div id="logo" class="left">
+				<a href="#home"><img src="img/logo.png" alt="Logo"></a>
+			</div>
+			<a href="#" id="touch-menu">Menu</a>
+			<hav id="nav" class="left">
+				<ul class="nav" class="clearfix">
+					<li><a id="active" href="/">home</a></li>
+					<li><a href="about.html" target="blank">about</a></li>
+					<li><a href="portfolio.html" target="blank">portfolio</a></li>
+					<li><a href="blog.html" target="blank">blog</a></li>
+					<li><a href="styles.html" target="blank">styles</a></li>
+					<li><a href="contact.html" target="blank">contact</a></li>
+				</ul>
+			</hav>
+			<form id="form" class="right" action="#">
+				<input id="search_1" type="text" placeholder="Search here"/>
+				<input id="search_2" type="text" placeholder="Search"/>
+				<input type="submit" value=""/>
+				<a href="#" class="close">x</a>
+			</form>
+			<a href="#" class="linkForm"><!-- &nbsp; --></a>
+		</header>
+		<!-- Шапка страницы END -->
+		<h1>Design is not the narrow application of formal skills, it is a way of thinking.</h1>
+	</div>
+	<!-- Верхний блок - шапка с заголовком END-->
+
+	<!-- Второй блок с контентом с сайдбаром -->
+	<div id="second_block">
+		<!-- Секция блога -->
+		<div id="blog" class="center clearfix">
+			<div class="sidebar-blog left">
+				<h2>from the blog</h2>
+			</div>
+			<!-- Контент секции блога -->
+			<div id="blog_content" class="left">
+				<div class="blog_item">
+					<a class="link" href="#" target="blank">
+						<img class="blog_img" src="img/blog_img_1.jpg" alt="picture">
+						<img class="blog_img_dark" src="img/blog_img_1_dark.jpg" alt="picture">
+					</a>
+					<a class="a_h3" href="#" target="blank"><h3>Blog post titles in here</h3></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed nulla eget turpis viverra ornare.</p>
+				</div>
+				<div class="blog_item">
+					<a class="link" href="#" target="blank">
+						<img class="blog_img" src="img/blog_img_2.jpg" alt="picture">
+						<img class="blog_img_dark" src="img/blog_img_2_dark.jpg" alt="picture">
+					</a>
+					<a class="a_h3" href="#" target="blank"><h3>Blog post titles in here</h3></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed nulla eget turpis viverra ornare.</p>
+				</div>
+				<div class="blog_item">
+					<a class="link" href="#" target="blank">
+						<img class="blog_img" src="img/blog_img_3.jpg" alt="picture">
+						<img class="blog_img_dark" src="img/blog_img_3_dark.jpg" alt="picture">
+					</a>
+					<a class="a_h3" href="#" target="blank"><h3>Blog post titles in here</h3></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed nulla eget turpis viverra ornare.</p>
+				</div>
+			</div>
+			<!-- Контент секции блога END-->
+		</div>
+		<!-- Секция блога END-->
+
+		<!-- Секция последних проектов -->
+		<div id="projects" class="center clearfix">
+			<div class="icon-menu">
+				<span class="divide"></span>
+				<span class="divide"></span>
+				<span class="divide"></span>
+			</div>
+			<div class="sidebarProj left">
+				<h2>recent projects</h2>
+			</div>
+			<!-- Контент секции последних проектов -->
+			<div id="proj_content" class="left clearfix">
+				<div class="proj_item item_1">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_1.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_1_dark.jpg" alt="picture">
+					</a>
+					<div id="item_txt">
+						<h4>in this way, envanto</h4>
+						<p>Photography</p>
+					</div>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+					 <img class="proj_img" src="img/proj_img_2.jpg" alt="picture">
+					 <img class="proj_img_dark" src="img/proj_img_2_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_3.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_3_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_4.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_4_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover"  href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_5.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_5_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_6.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_6_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_7.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_7_dark.jpg" alt="picture">
+					</a>
+				</div>
+				<div class="proj_item">
+					<a class="hover" href="#" target="blank">
+						<img class="proj_img" src="img/proj_img_8.jpg" alt="picture">
+						<img class="proj_img_dark" src="img/proj_img_8_dark.jpg" alt="picture">
+					</a>
+				</div>
+			</div>
+			<!-- Контент секции последних проектов END-->
+		</div>
+		<!-- Секция последних проектов END-->
+	</div>
+	<!-- Второй блок с контентом с сайдбаром END-->
+	 <!-- Подвал страницы -->
+	<footer>
+		<div class="center">
+			<div id="footer_text" class="clearfix">
+				<div class="footer_item left">
+					<h2>about us</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in purus nibh. Donec ornare felis neque. Nullam tortor nulla, sodales quis posuere quis, tristique nec libero. Proin vitae convallis odio. Morbi nec enim nisi. Aliquam erat volutpat.</p>
+				</div>
+				<div class="footer_item left">
+					<h2>twitter feed</h2>
+					<p>Check out th best Themes online in the world at <span><a href="#">http://themeforest.com</a></span></p>
+					<p class="days">1 day ago</p>
+					<p><span>@envanto</span>, Motive wordpress theme full responsive is coming soon...</p>
+					<p class="days">4 days ago</p>
+				</div>
+				<div class="footer_item right">
+					<h2>follow us</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in purus nibh. Donec ornare felis neque. Nullam tortor!</p>
+					<div id="social" class="clearfix">
+						<a id="tw" href="#" target="blank">&nbsp;</a>
+						<a id="fb" href="#" target="blank">&nbsp;</a>
+						<a id="soc_3" href="#" target="blank">&nbsp;</a>
+						<a id="be" href="#" target="blank">&nbsp;</a>
+						<a id="soc_5" href="#" target="blank">&nbsp;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	 <!-- Подвал страницы END -->
+</div>
+<!-- Обвертка страницы END
+</body>
+</html>
